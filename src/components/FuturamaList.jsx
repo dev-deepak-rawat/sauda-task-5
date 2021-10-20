@@ -20,11 +20,12 @@ export default function FuturamaList() {
 
   return (
     <>
-      <div className="card-container">
+      <header className="title">Futurama Characters</header>
+      <main className="card-container">
         {futuramaCharacters.map((character = {}) => (
           <FuturamaCharacter character={character} key={character.id} />
         ))}
-      </div>
+      </main>
     </>
   );
 }

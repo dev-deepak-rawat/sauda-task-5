@@ -5,7 +5,10 @@ const futuramaCharacteristics = [
   "occupation",
   "species",
 ];
-export default function FuturamaCharacterDetails({ character = {} }) {
+export default function FuturamaCharacterDetails({
+  character = {},
+  handleSay,
+}) {
   const { name = {} } = character;
   const { first, middle, last } = name;
 
@@ -22,6 +25,9 @@ export default function FuturamaCharacterDetails({ character = {} }) {
           ""
         )
       )}
+      <button className="card-item__button" onClick={handleSay}>
+        Say Something
+      </button>
     </div>
   );
 }
